@@ -65,9 +65,16 @@ body {
 
 /* Sections de contenu */
 .content-section {
+    max-width: 1200px;
+    margin: 0 auto;
     display: none;
     padding: 80px 20px;
     background-color: white;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .content-section.active {
@@ -98,8 +105,9 @@ body {
 }
 
 /* Section "Ma passion" */
-.passion {
+.passion {    
     text-align: center;
+
 }
 
 .passion p {
