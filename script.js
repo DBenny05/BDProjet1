@@ -17,6 +17,5 @@ tabButtons.forEach(button => {
 
 // Interaction JavaScript pour le bouton
 document.getElementById('passionButton').addEventListener('click', function() {
-    const message = document.getElementById('specialMessage');
-    message.classList.remove('hidden'); // Affiche le message
+    alert("Merci d'avoir visité ma page !");// Affiche le message
 });
