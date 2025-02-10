@@ -18,12 +18,12 @@ body {
 .hero {
     background-color: #0a2540;
     color: white;
-    padding: 100px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -41,6 +41,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne sur les petits écrans */
 }
 
 .tab-button {
@@ -52,6 +53,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex: 1 1 auto; /* Permet aux boutons de s'adapter */
 }
 
 .tab-button.active {
@@ -65,27 +67,27 @@ body {
 
 /* Sections de contenu */
 .content-section {
-    max-width: 1200px;
-    margin: 0 auto;
     display: none;
-    padding: 80px 20px;
+    padding: 40px 20px;
     background-color: white;
-}
-
-.container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
 }
 
 .content-section.active {
     display: block;
 }
 
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 /* Section "À propos de moi" */
 .about-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
+    text-align: center;
 }
 
 .profile-img {
@@ -104,49 +106,16 @@ body {
     color: #666;
 }
 
-/* Section "Ma passion" */
-.passion {    
-    text-align: center;
-
-}
-
-.passion p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.passion button {
-    background-color: #00c7b7;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.passion button:hover {
-    background-color
-}
-
-.container1 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* Section des fonctionnalités */
 .features {
-    padding: 5px 10px;
+    padding: 20px 0;
     background-color: white;
     text-align: center;
 }
 
 .features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .feature-grid {
@@ -170,4 +139,102 @@ body {
 .feature p {
     font-size: 1rem;
     color: #666;
+}
+
+/* Section "Ma passion" */
+#passion {
+    text-align: center;
+}
+
+#passion p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#passionButton {
+    background-color: #00c7b7;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#passionButton:hover {
+    background-color: #009f8e;
+}
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0a2540;
+    color: white;
+}
+
+/* Media Queries pour les écrans mobiles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .tabs .container {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-bottom: 20px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 20px 10px;
+    }
+
+    .container h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .tab-button {
+        font-size: 0.9rem;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    #passionButton {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
 }
